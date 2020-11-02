@@ -37,3 +37,21 @@ function cleanObject (object){
 
         return object;
     }
+
+//Copiar Objeto
+
+copy: function (object, temp = {}){
+        Object.entries(object).forEach((item) => {
+            const nombre  = item[0];
+            const value = item[1];
+
+            if(value && typeof value == 'object' && !Array.isArray(value) ){
+                temp[nombre] = this.copy(value, {});
+            }
+            else {
+                temp[nombre] = value;
+            }
+        });
+
+        return temp;
+}
