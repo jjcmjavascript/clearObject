@@ -46,7 +46,7 @@ copy: function (object, temp = {}){
             const value = item[1];
 
             if(value && typeof value == 'object' && !Array.isArray(value) ){
-                temp[nombre] = this.copy(value, {});
+                temp[nombre] = copy(value, {});
             }
             else {
                 temp[nombre] = value;
