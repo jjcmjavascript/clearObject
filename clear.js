@@ -21,7 +21,7 @@ function cleanObject (object, temp = {} ){
 //Objeto original Limpio
 
     function cleanObject(object){
-        Objec.entries(object).forEach((item) => {
+        Object.entries(object).forEach((item) => {
             const nombre  = item[0];
             const value = item[1];
             if(Array.isArray(value)){
@@ -36,4 +36,4 @@ function cleanObject (object, temp = {} ){
         });
 
         return object;
-    },
+    }
