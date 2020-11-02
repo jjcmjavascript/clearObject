@@ -40,7 +40,7 @@ function cleanObject (object){
 
 //Copiar Objeto
 
-copy: function (object, temp = {}){
+function copy (object, temp = {}){
         Object.entries(object).forEach((item) => {
             const nombre  = item[0];
             const value = item[1];
