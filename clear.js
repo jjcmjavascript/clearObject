@@ -20,7 +20,7 @@ function cleanObject (object, temp = {} ){
 
 //Objeto original Limpio
 
-    function cleanObject(object){
+function cleanObject (object){
         Object.entries(object).forEach((item) => {
             const nombre  = item[0];
             const value = item[1];
@@ -28,7 +28,7 @@ function cleanObject (object, temp = {} ){
                 object[nombre] = [];
             }
             if(value && typeof value == 'object'){
-                object[nombre] = cleanObject(value, {});
+                object[nombre] = cleanObject(value);
             }
             else {
                 object[nombre] = null;
